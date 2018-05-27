@@ -33,4 +33,24 @@ defmodule Cards do
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
+
+  def save(deck, filename) do
+    binary = :erlang.term_to_binary(deck)
+    File.write(filename, binary)
+  end
+
+  def load(file) do
+    case File.read(file) do
+      {:ok, binary} -> 
+        :erlang.binary_to_term(binary)
+      {:error, _reason} -> 
+        "That file does not exist Jak ;)"
+    end
+  end
+
+  def gameon(hand_size) do
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
+  end
 end
