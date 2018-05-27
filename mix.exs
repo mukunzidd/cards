@@ -1,4 +1,5 @@
 defmodule Cards.MixProject do
+
   use Mix.Project
 
   def project do
@@ -7,7 +8,15 @@ defmodule Cards.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      name: "Cards",
+      source_url: "https://github.com/mmukunzidd/",
+      homepage_url: "http://localhost",
+      docs: [main: "Cards", # The main page in the docs
+              # logo: "path/to/logo.png",
+              extras: ["README.md"]]
     ]
   end
 
@@ -21,8 +30,7 @@ defmodule Cards.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      {:ex_doc, "~> 0.18.3"}
     ]
   end
 end

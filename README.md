@@ -1,6 +1,6 @@
 # Cards
 
-**TODO: Add description**
+Casino men, black jackers and all cards addicts this is the game for you. Right in your CLI.
 
 ## Installation
 
@@ -18,4 +18,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/cards](https://hexdocs.pm/cards).
-
